@@ -3,20 +3,49 @@
 
     <head>
         <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
     </head>
 
     <body>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+      <nav class="navbar">
+            <img src="images/logo.png">
+            <div class="hamburger" onclick="toggleMenu()"></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/collections">Collections</a></li>
+            </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         </nav>
-        <hr>
+        <!-- <hr> -->
+        
+        <!-- <h1>Welcome to My Website</h1>
 
-        <h1>Welcome to My Website</h1>
-
-        <p>This is my homepage.</p>
-
+        <p>This is my homepage.</p> -->
+        <div class="row">
+            <div class="column">
+                <h2>Welcome to My Website</h2>
+                <p>This is my homepage.</p>
+            </div>
+            <div class="column">
+                <ol>
+                    <li>Explore my art collection.</li>
+                    <li>Learn about my artistic journey.</li>
+                    <li>Contact me for collaborations or inquiries.</li>
+                </ol>
+            </div>
+        </div>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            }
+        </script>
     </body>
 
 </html>

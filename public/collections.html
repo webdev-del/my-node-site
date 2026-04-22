@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Collections | Art Enthusiast</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Art Enthusiast</h1>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/collections">Collections</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <hr>
+    <main class="collections-page">
+        <h1>My Art Collections</h1>
+        <p>Welcome to my art collections page!</p>
+        <!--I added images to my collections page and made them clickable as links to other pages so it's easier to navigate my site on a mobile device -->
+        <figure>
+            <a href="/european"><img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/437903/1580188/main-image" alt="European Art"></a>
+            <figcaption>European Art</figcaption>
+        </figure>
+        <figure>
+            <a href="/asian"><img src="https://luxurycolumnist.com/wp-content/uploads/2022/04/The_Great_Wave_hokusai-800x538.jpg" alt="Asian Art"></a>
+            <figcaption>Asian Art</figcaption>
+        </figure>
+        <br> 
+        <figure>
+            <a href="/native-american"><img src="https://artincontext.org/wp-content/uploads/2021/09/American-Indian-Art.avif" alt="Native American Art"></a>
+            <figcaption>Native American Art</figcaption>
+        </figure>
+        <figure>
+            <a href="/hispanic"><img src="https://i.pinimg.com/originals/4f/93/61/4f9361755245d998abfd06e8fd41938a.jpg" alt="Hispanic Art"></a>
+            <figcaption>Hispanic Art</figcaption>
+        </figure>
+        <br>
+        <figure>
+            <a href="/african"><img src="https://www.tingatingaart.com/cdn/shop/articles/african_culture_2048x.jpg?v=1701245064" alt="African Art"></a>
+            <figcaption>African Art</figcaption>
+        </figure>
+        <figure>
+            <a href="/modern"><img src="https://img.freepik.com/premium-vector/abstract-art-painting-modern-art-abstract-art-painting-modern-art_912214-70095.jpg" alt="Modern Art"></a>
+            <figcaption>Modern Art</figcaption>
+        </figure>
+    </main>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

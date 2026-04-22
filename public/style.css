@@ -1,0 +1,279 @@
+body {
+    background-image: url("https://thumbs.dreamstime.com/b/beige-abstract-art-texture-background-website-banner-366426479.jpg");
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+}
+
+/* Desktop nav links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide nav links by default */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* When JS adds .active */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* GRID (unchanged) */
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* FORM STYLES (unchanged) */
+.form-page {
+    max-width: 680px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.required {
+    color: #c0392b;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2e4a7a;
+    box-shadow: 0 0 0 2px rgba(46, 74, 122, 0.15);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+}
+
+legend {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.error-msg {
+    color: #c0392b;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.hint {
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button[type="submit"] {
+    background: #2e4a7a;
+    color: white;
+    border: none;
+    padding: 0.65rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #1a3560;
+}
+
+button[type="reset"] {
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 0.65rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.success-msg {
+    background: #e8f8ee;
+    border: 2px solid #1a6b3c;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+}
+.row{
+    display: flex; 
+    flex-wrap: wrap;
+}
+.column{
+    flex: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .column {
+        flex: 100%;
+    }
+}
+.navbar img{
+    width: 20%;
+}
+.lustria-regular {
+  font-family: "Lustria", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+@media (max-width: 600px){
+    h2{
+        font-size: 2rem;
+    }
+}
+.collections-page figure{
+   display: inline;
+}
+.collections-page img{
+    height: 600px;
+    width: 500px;
+}

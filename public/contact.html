@@ -1,21 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
-        <title>Contact</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us|Art Enthusiast</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
     </head>
 
     <body>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+       <nav class="navbar">
+            <h1>Art Enthusiast</h1>
+            <div class="hamburger" onclick="toggleMenu()"></div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/collections">Collections</a></li>
+                
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
         <hr>
-
-        <h1>Contact</h1>
-
-        <p>This page explains how to contact me.</p>
+        <main class="form-page">
+            <h1>Contact Us</h1>
+            <p> Fill out the form below with any inquiries or messages you have for us.</p>
+            <form id="contactForm" action="/send" method="post" novalidate>
+                <!--Fullname-->
+                <div class="form-group">
+                    <label for="fullName">Full Name<span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Vera West" autocomplete="name" required>
+                    <span class="error-msg" id="fullNameError"></span>
+                </div>
+                <!--Email-->
+                <div class="form-group">
+                    <label for="email">Email Address<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="vera.west@example.com" autocomplete="email" required>
+                    <span class="error-msg" id="emailError"></span>
+                </div>
+                <!--Phone-->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(208) 667-0100" autocomplete="tel">
+                    <span class="error-msg" id="phoneError"></span>
+                </div>
+                <!--Reason for contact-->
+                <div class="form-group">
+                    <label for="reason">Reason for Contact<span class="required">*</span></label>
+                    <select id="reason" name="reason" required>
+                        <option value="">--Please Select--</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Customer Support</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-msg" id="reasonError"></span>
+                </div>
+                <!--Preferred contact method-->
+                <fieldset class="form-group">
+                    <legend>Preferred Contact Method<span class="required">*</span></legend>
+                    <div class="radio-group">
+                        <input type="radio" id="contactEmail" name="contactMethod" value="email" required>
+                        <label for="contactEmail">Email</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+                        <label for="contactPhone">Phone</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="contactEither" name="contactMethod" value="either">
+                        <label for="contactEither">Either is fine</label>
+                    </div>
+                    <span class="error-msg" id="contactMethodError"></span>
+                </fieldset>
+                <!--Services of interest-->
+                <fieldset class="form-group">
+                    <legend> I am interested in(select all that apply)</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="svcConsulting" name="services" value="consulting">
+                        <label for="svcConsulting">Art Consulting</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="svcDesign" name="services" value="design">
+                        <label for="svcDesign">Design Services</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="svcSupport" name="services" value="support">
+                        <label for="svcSupport">Ongoing Support</label>
+                    </div>
+                </fieldset>
+                <!--Preferred callback date-->
+                <div class="form-group">
+                    <label for="callbackDate">Preferred Callback Date</label>
+                    <input type="date" id="callbackDate" name="callbackDate" min="2026-01-01">
+                </div>
+                <!--Message-->
+                <div class="form-group">
+                    <label for="message">Message<span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you..." maxlenght="1000" required></textarea>
+                    <small class="hint">Maximum 100 characters</small>
+                    <span class="error-msg" id="messageError"></span>
+                </div>
+                <!--Buttons-->
+                <div class="form-buttons">
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Clear Form</button>
+                </div>
+            </form>
+        </main>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            }
+        </script>
 
     </body>
 
