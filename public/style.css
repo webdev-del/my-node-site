@@ -1,3 +1,9 @@
+:root{
+    --primary-color:#000000;
+    --secondary-color: #040200;
+    --main-font: sans-sherif;
+    --spacing: 6px;
+}
 body {
     background-image: url("https://thumbs.dreamstime.com/b/beige-abstract-art-texture-background-website-banner-366426479.jpg");
     margin: 0;
@@ -21,7 +27,7 @@ body {
 
 .nav-links li a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-color);
     font-weight: 500;
 }
 
@@ -200,16 +206,19 @@ button[type="reset"] {
 }
 .navbar img{
     width: 20%;
+    animation: fadeIn 3s ease-in;
 }
 .lustria-regular {
   font-family: "Lustria", serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--primary-color);
 }
 .lato-thin {
   font-family: "Lato", sans-serif;
   font-weight: 100;
   font-style: normal;
+  color: var(--secondary-color);
 }
 
 .lato-light {
@@ -276,4 +285,21 @@ button[type="reset"] {
 .collections-page img{
     height: 600px;
     width: 500px;
+}
+figcaption{
+    color: var(--secondary-color);
+}
+ol{
+    word-spacing: var(--spacing);
+}
+.row img:hover{
+    transform: scale(1.1);
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:2;
+    }
 }
