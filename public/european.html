@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>European</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/x-icon" href="favicon.png">
+    </head>
+    <body>
+        <nav class="navbar">
+                <img src="images/logo.png">
+                <div class="hamburger" onclick="toggleMenu()"></div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/collections">Collections</a></li>
+                </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            }
+        </script>
+    </body>
+
+</html>
